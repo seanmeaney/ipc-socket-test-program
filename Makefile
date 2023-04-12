@@ -1,7 +1,7 @@
 EXE = server client
 SOBJ = server.o connect.o lib.o books.o
 COBJ = client.o connect.o
-CC = gcc -Wall
+CC = gcc -Wall -g
 
 all:	$(EXE)
 

@@ -3,13 +3,13 @@
 #include <string.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
-// #include <signal.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <sys/socket.h>
-// #include <sys/types.h>
-// #include <unistd.h>
+#include <signal.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #include "connect.h"
 #include "defs.h"
@@ -33,6 +33,7 @@ void setupServerSocket(int *s) {
 
     // Bind listen socket
 
+    // unlink(*s);
     i = bind(*s, (struct sockaddr *)&serverAddr, sizeof(serverAddr));
     if (i < 0) {
         printf("Could not bind socket\n");
