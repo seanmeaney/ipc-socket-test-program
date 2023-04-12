@@ -4,6 +4,9 @@
 #include <string.h>
 
 #include "defs.h"
+#include "server.h"
+
+#include <unistd.h>
 
 int listenSocket;
 

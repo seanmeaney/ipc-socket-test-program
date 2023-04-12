@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "defs.h"
+#include "books.h"
 
 /**
  * @brief Initializes the book list to null values

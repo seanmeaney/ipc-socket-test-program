@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "defs.h"
+#include "library.h"
 
 /**
  * @brief Reads book data from booksData.txt and generates unique id for each book, initializes books and assigns values

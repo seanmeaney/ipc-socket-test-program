@@ -3,9 +3,9 @@
 #include <string.h>
 
 #include "defs.h"
+#include "client.h"
+#include <unistd.h>
 
-void handleCheck(int, RequestType, char *, char *);
-void clientMenu(int *);
 
 int main() {
     int socket;
