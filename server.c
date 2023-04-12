@@ -19,7 +19,7 @@ int main() {
 /**
  * @brief Closes listening socket and exits server process
  * 
- * @param i 
+ * @param i exit code
  */
 void handleSig1(int i) {
     printf("Shutting down...\n");
@@ -31,7 +31,7 @@ void handleSig1(int i) {
 /**
  * @brief Closes listening socket and deallocates library memory
  * 
- * @param lib in: library
+ * @param lib   library to free
  */
 void closeAll(LibraryType *lib) {
     close(listenSocket);
@@ -41,8 +41,8 @@ void closeAll(LibraryType *lib) {
 /**
  * @brief Serves all requests from client (recieving request's and returning result)
  * 
- * @param clientSocket in: clientsocket
- * @param lib in-out: library
+ * @param clientSocket  clientsocket
+ * @param lib           library with books
  */
 void serveOneClient(int clientSocket, LibraryType *lib) {
     char requestStr[MAX_STR];

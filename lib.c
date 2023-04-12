@@ -7,7 +7,7 @@
 /**
  * @brief Reads book data from booksData.txt and generates unique id for each book, initializes books and assigns values
  * 
- * @param books in-out: list of books
+ * @param books    list of books
  */
 void loadBooks(BookListType *books) {
     FILE *infile;
@@ -45,8 +45,8 @@ void loadBooks(BookListType *books) {
 /**
  * @brief Initialize library, allocates memory, loads book data and prints the data of all books
  * 
- * @param library uninitialized library variable
- * @param n name for library
+ * @param library   uninitialized library variable
+ * @param n         name for library
  */
 void initLibrary(LibraryType **library, char *n) {
     (*library) = malloc(sizeof(LibraryType));
@@ -61,9 +61,9 @@ void initLibrary(LibraryType **library, char *n) {
 /**
  * @brief Searches for for book in library, and marks it checked out if found and valid (currently checked in)
  * 
- * @param lib in-out: library
- * @param bookId in: bookid to search for
- * @return out: int success flag C_OK if found and valid, C_BAD_STATUS if invalid and C_BOOK_NOT_FOUND if not found
+ * @param lib       library struct containing list of books
+ * @param bookId    bookid to search for
+ * @return          int success flag C_OK if found and valid, C_BAD_STATUS if invalid and C_BOOK_NOT_FOUND if not found
  */
 int checkOutBook(LibraryType *lib, int bookId) {
     BookType *b;
@@ -83,9 +83,9 @@ int checkOutBook(LibraryType *lib, int bookId) {
 /**
  * @brief Searches for for book in library, and marks it checked in if found and valid (currently checked out)
  * 
- * @param lib in-out: library
- * @param bookId in: bookid to search for
- * @return out: int success flag C_OK if found and valid, C_BAD_STATUS if invalid and C_BOOK_NOT_FOUND if not found
+ * @param lib       library struct containing list of books
+ * @param bookId    bookid to search for
+ * @return          int success flag C_OK if found and valid, C_BAD_STATUS if invalid and C_BOOK_NOT_FOUND if not found
  */
 int checkInBook(LibraryType *lib, int bookId) {
     BookType *b;
@@ -105,7 +105,7 @@ int checkInBook(LibraryType *lib, int bookId) {
 /**
  * @brief Deallocates all memory for books and library
  * 
- * @param lib in-out: library
+ * @param lib library struct to free
  */
 void cleanupLibrary(LibraryType *lib) {
     cleanupList(&lib->books);

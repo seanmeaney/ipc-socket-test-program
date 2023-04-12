@@ -46,10 +46,10 @@ int main() {
 /**
  * @brief handles check in and check out process by sending request, recieving response and displaying confirmation / error message
  * 
- * @param socket in: client socket
- * @param r in: what request to send (ie check in, check out)
- * @param request in: request string (empty or book name)
- * @param response in-out: string to return with server response
+ * @param socket    client socket
+ * @param r         what request to send (ie check in, check out)
+ * @param request   request string (empty or book name)
+ * @param response  string to return with server response
  */
 void handleCheck(int socket, RequestType r, char *request, char *response) {
     char inputStr[MAX_STR];
