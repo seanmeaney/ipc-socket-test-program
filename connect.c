@@ -11,6 +11,7 @@
 // #include <sys/types.h>
 // #include <unistd.h>
 
+#include "connect.h"
 #include "defs.h"
 
 void setupServerSocket(int *s) {

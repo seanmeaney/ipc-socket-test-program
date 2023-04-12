@@ -25,10 +25,4 @@ typedef enum { REQ_RET_BOOKS,
                REQ_CLOSE
 } RequestType;
 
-void setupServerSocket(int *);
-void acceptConnection(int, int *);
-void setupClientSocket(int *);
-void rcvData(int, char *);
-void sendData(int, char *);
-
 #endif

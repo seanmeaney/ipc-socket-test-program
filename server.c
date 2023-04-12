@@ -5,7 +5,7 @@
 
 #include "defs.h"
 #include "server.h"
-
+#include "connect.h"
 #include <unistd.h>
 
 int listenSocket;

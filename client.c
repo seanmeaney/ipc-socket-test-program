@@ -4,6 +4,7 @@
 
 #include "defs.h"
 #include "client.h"
+#include "connect.h"
 #include <unistd.h>
 
 
